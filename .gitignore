@@ -10,3 +10,4 @@ results/*.csv
 results/*.txt
 !results/.gitkeep
 .ipynb_checkpoints/
+.idea/
