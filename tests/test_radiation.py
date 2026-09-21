@@ -62,6 +62,8 @@ def test_drag_scales_with_cross_section():
         2.0 * drag_small.approximate_force(),
         rel=1e-12,
     )
+
+
 def test_drag_has_expected_gamma_squared_scaling():
     """
     In the ultra-relativistic approximation:
@@ -99,3 +101,4 @@ def test_drag_has_expected_gamma_squared_scaling():
         expected_ratio,
         rel=1e-12,
     )
+
