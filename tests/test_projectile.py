@@ -46,3 +46,14 @@ def test_combined_loss_cannot_be_smaller_than_each_loss_channel():
 
     assert e_combined[-1] <= e_igm[-1]
     assert e_combined[-1] <= e_cmb[-1]
+
+
+def test_energy_monotonically_decreases():
+    projectile = RelativisticProjectile()
+
+    _, energy = projectile.simulate(num_steps=1000)
+
+    differences = energy[1:] - energy[:-1]
+
+    assert (differences <= 0.0).all()
+
